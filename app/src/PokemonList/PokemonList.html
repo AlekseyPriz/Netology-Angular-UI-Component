@@ -1,0 +1,27 @@
+
+<div ng-controller="PokemonListAMCtrl" ng-cloak="" layout-gt-sm="row" layout="column" class="listdemoBasicUsage" ng-app="PokemonApp">
+    <div flex-gt-sm="50" flex="">
+        <md-toolbar layout="row" class="md-hue-3">
+            <div class="md-toolbar-tools">
+                <span>Список покемонов</span>
+            </div>
+        </md-toolbar>
+        <md-content>
+            <md-list flex="">
+                <md-subheader class="md-no-sticky">В основе шаблон от Angular Material</md-subheader>
+
+                <md-list-item class="md-3-line" ng-repeat="pokemon in pokemons" ng-click="null">
+
+                    <div class="md-list-item-text" layout="column">
+                        <h3>Имя : {{ pokemon.name }}</h3>
+                        <h4>Рост :{{ pokemon.height }}</h4>
+                        <p>Вес : {{ pokemon.weight }}</p>
+                    </div>
+
+                </md-list-item>
+
+                <md-divider></md-divider>
+            </md-list>
+        </md-content>
+    </div>
+</div>
